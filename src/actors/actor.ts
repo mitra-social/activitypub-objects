@@ -3,6 +3,7 @@ import { ActivityObject } from "../objects/object";
 export interface Actor extends ActivityObject {
   type: Actors;
   name: string;
+  preferredUsername?: string;
 }
 
 export enum Actors {

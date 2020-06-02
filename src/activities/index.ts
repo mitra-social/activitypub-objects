@@ -1,4 +1,5 @@
 export { Accept } from "./accept";
+export { Activity, Activities } from "./activity";
 export { Add } from "./add";
 export { Announce } from "./announce";
 export { Arrive } from "./arrive";

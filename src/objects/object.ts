@@ -10,10 +10,10 @@ export interface ActivityObject {
   attributedTo?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
   audience?: ActivityObject | Link;
   content?: string;
-  contentMap?: {[key: string]: string;}
+  contentMap?: { [key: string]: string; }
   context?: ActivityObject | Link;
   name?: string;
-  nameMap?: {[key: string]: string;}
+  nameMap?: { [key: string]: string; }
   generator?: ActivityObject | Link;
   icon?: Link | Image | Array<Link | Image>;
   location?: ActivityObject | URL | Link;
@@ -23,13 +23,13 @@ export interface ActivityObject {
   published?: Date;
   updated?: Date;
   inReplyTo?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
-  to?: ActivityObject | Link | Array<ActivityObject | Link>;
-  bto?: ActivityObject | Link | Array<ActivityObject | Link>;
-  cc?: ActivityObject | Link | Array<ActivityObject | Link>;
-  bcc?: ActivityObject | Link | Array<ActivityObject | Link>;
+  to?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
+  bto?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
+  cc?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
+  bcc?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
   replies?: Collection;
   summary?: string;
-  summaryMap?: {[key: string]: string;}
+  summaryMap?: { [key: string]: string; }
   tag?: ActivityObject | Link | Array<ActivityObject | Link>;
   url?: URL | Link | Array<URL | Link>;
   mediaType?: MediaType;

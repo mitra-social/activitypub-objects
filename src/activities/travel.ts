@@ -10,6 +10,6 @@ export class Travel implements IntransitiveActivity {
   constructor(
     public readonly actor: Actor | URL,
     public readonly origin: ActivityObject | URL,
-    public readonly target: ActivityObject | URL,
-  ) { }
+    public readonly target: ActivityObject | URL
+  ) {}
 }

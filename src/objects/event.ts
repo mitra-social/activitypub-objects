@@ -7,10 +7,10 @@ export class Event implements ActivityObject {
   public readonly startTime?: Date;
   public readonly endTime?: Date;
   constructor(params: {
-    name: string,
-    id?: URL,
-    startTime?: Date,
-    endTime?: Date,
+    name: string;
+    id?: URL;
+    startTime?: Date;
+    endTime?: Date;
   }) {
     this.name = params.name;
     if (params.id != null) {

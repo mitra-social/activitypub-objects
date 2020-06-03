@@ -11,14 +11,14 @@ export class Place implements ActivityObject {
   public readonly radius?: number;
   public readonly units?: string;
   constructor(params: {
-    name: string,
-    id?: URL,
-    accuracy?: number,
-    altitude?: number,
-    latitude?: number,
-    longitude?: number,
-    radius?: number,
-    units?: string,
+    name: string;
+    id?: URL;
+    accuracy?: number;
+    altitude?: number;
+    latitude?: number;
+    longitude?: number;
+    radius?: number;
+    units?: string;
   }) {
     this.name = params.name;
     if (params.id != null) {

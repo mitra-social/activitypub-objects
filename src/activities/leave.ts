@@ -9,6 +9,6 @@ export class Leave implements Activity {
   public readonly type = Activities.LEAVE;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

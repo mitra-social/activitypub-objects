@@ -7,9 +7,9 @@ export class Image implements ActivityObject {
   public readonly id?: URL;
   public readonly url: Link | URL | Array<Link | URL>;
   constructor(params: {
-    name: string,
-    url: Link | URL | Array<Link | URL>,
-    id?: URL,
+    name: string;
+    url: Link | URL | Array<Link | URL>;
+    id?: URL;
   }) {
     this.name = params.name;
     this.url = params.url;

@@ -10,6 +10,6 @@ export class Remove implements Activity {
   constructor(
     public readonly actor: Actor | URL,
     public readonly object: ActivityObject | URL,
-    public readonly origin?: ActivityObject | URL,
-  ) { }
+    public readonly origin?: ActivityObject | URL
+  ) {}
 }

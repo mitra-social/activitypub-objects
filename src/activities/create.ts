@@ -9,6 +9,6 @@ export class Create implements Activity {
   public readonly type = Activities.CREATE;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

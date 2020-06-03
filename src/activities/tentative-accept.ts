@@ -10,6 +10,6 @@ export class TentativeAccept implements Activity {
   constructor(
     public readonly actor: Actor | URL,
     public readonly object: ActivityObject | URL,
-    public readonly target?: ActivityObject | URL,
-  ) { }
+    public readonly target?: ActivityObject | URL
+  ) {}
 }

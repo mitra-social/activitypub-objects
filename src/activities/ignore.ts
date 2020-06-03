@@ -9,6 +9,6 @@ export class Ignore implements Activity {
   public readonly type = Activities.IGNORE;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

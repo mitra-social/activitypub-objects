@@ -5,7 +5,5 @@ import { Actor, Actors } from "./actor";
  */
 export class Organization implements Actor {
   public readonly type = Actors.ORGANIZATION;
-  constructor(
-    public readonly name: string,
-  ) { }
+  constructor(public readonly name: string) {}
 }

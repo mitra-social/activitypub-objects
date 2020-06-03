@@ -8,10 +8,10 @@ export class Video implements ActivityObject {
   public readonly url: Link | URL | Array<Link | URL>;
   public readonly duration: string;
   constructor(params: {
-    name: string,
-    url: Link | URL | Array<Link | URL>,
-    duration: string,
-    id?: URL,
+    name: string;
+    url: Link | URL | Array<Link | URL>;
+    duration: string;
+    id?: URL;
   }) {
     this.name = params.name;
     this.url = params.url;

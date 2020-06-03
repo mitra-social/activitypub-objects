@@ -9,6 +9,6 @@ export class Update implements Activity {
   public readonly type = Activities.UPDATE;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

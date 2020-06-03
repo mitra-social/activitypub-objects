@@ -39,7 +39,7 @@ export enum Activities {
   TRAVEL = "Travel",
   UNDO = "Undo",
   UPDATE = "Update",
-  VIEW = "View",
+  VIEW = "View"
 }
 
-export interface IntransitiveActivity extends Activity { }
+export type IntransitiveActivity = Activity;

@@ -10,5 +10,5 @@ export enum Actors {
   GROUP = "Group",
   ORGANIZATION = "Organization",
   PERSON = "Person",
-  SERVICE = "Service",
+  SERVICE = "Service"
 }

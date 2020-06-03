@@ -10,6 +10,6 @@ export class Offer implements Activity {
   constructor(
     public readonly actor: Actor | URL,
     public readonly object: ActivityObject | URL,
-    public readonly target?: Actor | URL | Array<Actor | URL>,
-  ) { }
+    public readonly target?: Actor | URL | Array<Actor | URL>
+  ) {}
 }

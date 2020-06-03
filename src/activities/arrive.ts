@@ -10,6 +10,6 @@ export class Arrive implements IntransitiveActivity {
   constructor(
     public readonly actor: Actor | URL,
     public readonly location: Activity | URL,
-    public readonly origin?: ActivityObject | URL,
-  ) { }
+    public readonly origin?: ActivityObject | URL
+  ) {}
 }

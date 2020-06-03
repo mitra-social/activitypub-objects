@@ -9,6 +9,6 @@ export class Dislike implements Activity {
   public readonly type = Activities.DISLIKE;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

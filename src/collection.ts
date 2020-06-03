@@ -22,8 +22,10 @@ interface CollectionPageBase extends CollectionBase {
   prev?: CollectionPage | Link;
 }
 
-export interface CollectionPage extends CollectionPageBase, Collection { }
+export interface CollectionPage extends CollectionPageBase, Collection {}
 
-export interface OrderedCollectionPage extends CollectionPageBase, OrderedCollection {
+export interface OrderedCollectionPage
+  extends CollectionPageBase,
+    OrderedCollection {
   startIndex: number;
 }

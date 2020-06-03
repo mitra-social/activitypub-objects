@@ -7,10 +7,10 @@ export class Tombstone implements ActivityObject {
   public readonly formerType: Objects;
   public readonly deleted: Date;
   constructor(params: {
-    name: string,
-    formerType: Objects,
-    deleted: Date,
-    id?: URL,
+    name: string;
+    formerType: Objects;
+    deleted: Date;
+    id?: URL;
   }) {
     this.name = params.name;
     this.formerType = params.formerType;

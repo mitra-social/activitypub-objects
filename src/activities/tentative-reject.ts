@@ -9,6 +9,6 @@ export class TentativeReject implements Activity {
   public readonly type = Activities.TENTATIVE_REJECT;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

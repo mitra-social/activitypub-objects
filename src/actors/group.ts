@@ -5,7 +5,5 @@ import { Actor, Actors } from "./actor";
  */
 export class Group implements Actor {
   public readonly type = Actors.GROUP;
-  constructor(
-    public readonly name: string,
-  ) { }
+  constructor(public readonly name: string) {}
 }

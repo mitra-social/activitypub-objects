@@ -9,6 +9,6 @@ export class Block implements Activity {
   public readonly type = Activities.BLOCK;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

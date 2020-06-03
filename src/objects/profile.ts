@@ -6,11 +6,7 @@ export class Profile implements ActivityObject {
   public readonly summary: string;
   public readonly describes: Actor;
   public readonly id?: URL;
-  constructor(params: {
-    summary: string,
-    describes: Actor,
-    id?: URL,
-  }) {
+  constructor(params: { summary: string; describes: Actor; id?: URL }) {
     this.summary = params.summary;
     this.describes = params.describes;
     if (params.id != null) {

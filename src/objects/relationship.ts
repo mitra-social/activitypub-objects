@@ -8,10 +8,10 @@ export class Relationship implements ActivityObject {
   public readonly subject: Actor;
   public readonly object: Actor;
   constructor(params: {
-    relationship: Relation,
-    subject: Actor,
-    object: Actor,
-    id?: URL,
+    relationship: Relation;
+    subject: Actor;
+    object: Actor;
+    id?: URL;
   }) {
     this.relationship = params.relationship;
     this.subject = params.subject;
@@ -23,5 +23,5 @@ export class Relationship implements ActivityObject {
 }
 
 export enum Relation {
-  FRIEND_OF = "http://purl.org/vocab/relationship/friendOf",
+  FRIEND_OF = "http://purl.org/vocab/relationship/friendOf"
 }

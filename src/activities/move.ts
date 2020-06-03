@@ -11,6 +11,6 @@ export class Move implements Activity {
     public readonly actor: Actor | URL,
     public readonly object: ActivityObject | URL,
     public readonly origin?: ActivityObject | URL,
-    public readonly target?: ActivityObject | URL,
-  ) { }
+    public readonly target?: ActivityObject | URL
+  ) {}
 }

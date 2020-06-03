@@ -9,6 +9,6 @@ export class Reject implements Activity {
   public readonly type = Activities.REJECT;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

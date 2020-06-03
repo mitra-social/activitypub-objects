@@ -13,17 +13,23 @@ export class Question implements IntransitiveActivity {
   public readonly oneOf?: ActivityObject[];
   public readonly closed?: Date;
   constructor(params: {
-    name: string,
-    id?: URL,
-    content?: string,
-    anyOf?: ActivityObject[],
-    oneOf?: ActivityObject[],
-    closed?: Date,
+    name: string;
+    id?: URL;
+    content?: string;
+    anyOf?: ActivityObject[];
+    oneOf?: ActivityObject[];
+    closed?: Date;
   }) {
     this.name = params.name;
     this.closed = params.closed;
-    if (params.content == null && params.anyOf == null && params.oneOf == null) {
-      throw new InvalidPropertiesError("Question object must not have both properties. (content, anyOf, oneOf)");
+    if (
+      params.content == null &&
+      params.anyOf == null &&
+      params.oneOf == null
+    ) {
+      throw new InvalidPropertiesError(
+        "Question object must not have both properties. (content, anyOf, oneOf)"
+      );
     }
     this.content = params.content;
     this.anyOf = params.anyOf;

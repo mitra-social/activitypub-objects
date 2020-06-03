@@ -10,10 +10,10 @@ export interface ActivityObject {
   attributedTo?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
   audience?: ActivityObject | Link;
   content?: string;
-  contentMap?: { [key: string]: string; }
+  contentMap?: { [key: string]: string };
   context?: ActivityObject | Link;
   name?: string;
-  nameMap?: { [key: string]: string; }
+  nameMap?: { [key: string]: string };
   generator?: ActivityObject | Link;
   icon?: Link | Image | Array<Link | Image>;
   location?: ActivityObject | URL | Link;
@@ -29,7 +29,7 @@ export interface ActivityObject {
   bcc?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
   replies?: Collection;
   summary?: string;
-  summaryMap?: { [key: string]: string; }
+  summaryMap?: { [key: string]: string };
   tag?: ActivityObject | Link | Array<ActivityObject | Link>;
   url?: URL | Link | Array<URL | Link>;
   mediaType?: MediaType;
@@ -48,5 +48,5 @@ export enum Objects {
   PROFILE = "Profile",
   RELATIONSHIP = "Relationship",
   TOMBSTONE = "Tombstone",
-  VIDEO = "Video",
+  VIDEO = "Video"
 }

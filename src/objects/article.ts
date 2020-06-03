@@ -8,10 +8,10 @@ export class Article implements ActivityObject {
   public readonly content: string;
   public readonly attributedTo?: Actor | URL | Array<Actor | URL>;
   constructor(params: {
-    name: string,
-    content: string,
-    id?: URL,
-    attributedTo?: Actor | URL | Array<Actor | URL>,
+    name: string;
+    content: string;
+    id?: URL;
+    attributedTo?: Actor | URL | Array<Actor | URL>;
   }) {
     this.name = params.name;
     this.content = params.content;

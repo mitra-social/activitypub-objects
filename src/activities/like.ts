@@ -9,6 +9,6 @@ export class Like implements Activity {
   public readonly type = Activities.LIKE;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

@@ -9,6 +9,6 @@ export class Read implements Activity {
   public readonly type = Activities.READ;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

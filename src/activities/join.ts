@@ -9,6 +9,6 @@ export class Join implements Activity {
   public readonly type = Activities.JOIN;
   constructor(
     public readonly actor: Actor | URL,
-    public readonly object: ActivityObject | URL,
-  ) { }
+    public readonly object: ActivityObject | URL
+  ) {}
 }

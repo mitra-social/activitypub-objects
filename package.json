@@ -10,8 +10,9 @@
     "url": "https://github.com/Aoinu/activitypub-objects.git"
   },
   "scripts": {
-    "lint": "node_modules/.bin/eslint './src/**/*.ts' './__tests__/**/*.ts'",
-    "lint:fix": "node_modules/.bin/eslint --fix './src/**/*.ts' './__tests__/**/*.ts'",
+    "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
     "test": "jest",
     "test:cov": "jest --coverage",
     "test:ci": "jest --ci --no-cache --coverage --reporters=default --reporters=jest-junit",
@@ -21,15 +22,21 @@
   },
   "devDependencies": {
     "@types/jest": "^25.2.3",
+    "@types/node": "^14.0.9",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
     "codecov": "^3.7.0",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
     "jest": "^26.0.1",
     "jest-junit": "^10.0.0",
+    "prettier": "^2.0.5",
     "ts-jest": "^26.1.0",
-    "typescript": "^3.9.3",
-    "eslint": "^7.0.0",
-    "eslint-plugin-prettier": "^3.1.3"
+    "typescript": "^3.9.3"
   },
   "keywords": [
     "activitypub"
-  ]
+  ],
+  "dependencies": {}
 }

@@ -1,23 +1,24 @@
-import { ActivityObject, Objects } from "./object";
-import { Link } from "../link";
+import { NameObject } from './name-object';
+import { Objects } from '../extended';
+import { Link } from '../core';
 
-export class Video implements ActivityObject {
+/**
+ * https://www.w3.org/ns/activitystreams#Video
+ */
+export class Video extends NameObject {
   public readonly type = Objects.VIDEO;
-  public readonly name: string;
-  public readonly id?: URL;
   public readonly url: Link | URL | Array<Link | URL>;
   public readonly duration: string;
+
   constructor(params: {
-    name: string;
+    name?: string;
+    nameMap?: { [key: string]: string };
     url: Link | URL | Array<Link | URL>;
     duration: string;
     id?: URL;
   }) {
-    this.name = params.name;
+    super(Objects.VIDEO, params);
     this.url = params.url;
     this.duration = params.duration;
-    if (params.id != null) {
-      this.id = params.id;
-    }
   }
 }

@@ -1,4 +1,4 @@
-import { ActivityObject } from "./objects";
+import { ActivityObject } from './core';
 import { InvalidPropertiesError } from "./exceptions";
 
 export const toJSON = (obj: ActivityObject): string => {

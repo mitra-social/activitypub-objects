@@ -1,15 +1,17 @@
-import { ActivityObject, Objects } from "./object";
+import { Objects } from '../extended';
+import { ContentObject } from './content-object';
 
-export class Note implements ActivityObject {
-  public readonly type = Objects.NOTE;
-  public readonly name: string;
-  public readonly id?: URL;
-  public readonly content: string;
-  constructor(params: { name: string; content: string; id?: URL }) {
-    this.name = params.name;
-    this.content = params.content;
-    if (params.id != null) {
-      this.id = params.id;
-    }
+/**
+ * https://www.w3.org/ns/activitystreams#Note
+ */
+export class Note extends ContentObject {
+  constructor(params: {
+    name?: string;
+    nameMap?: { [key: string]: string };
+    content?: string;
+    contentMap?: { [key: string]: string }
+    id?: URL
+  }) {
+    super(Objects.NOTE, params);
   }
 }

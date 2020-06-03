@@ -1,24 +1,27 @@
-import { ActivityObject, Objects } from "./object";
-import { Actor } from "../actors";
+import { Objects } from '../extended';
+import { Actor } from '../actors';
+import { BaseObject } from './base-object';
 
-export class Relationship implements ActivityObject {
+/**
+ * https://www.w3.org/ns/activitystreams#Relationship
+ */
+export class Relationship extends BaseObject {
   public readonly type = Objects.RELATIONSHIP;
   public readonly id?: URL;
   public readonly relationship: Relation;
   public readonly subject: Actor;
   public readonly object: Actor;
+
   constructor(params: {
     relationship: Relation;
     subject: Actor;
     object: Actor;
     id?: URL;
   }) {
+    super(Objects.RELATIONSHIP, params);
     this.relationship = params.relationship;
     this.subject = params.subject;
     this.object = params.object;
-    if (params.id != null) {
-      this.id = params.id;
-    }
   }
 }
 

@@ -4,7 +4,6 @@ export * from "./document";
 export * from "./event";
 export * from "./image";
 export * from "./note";
-export * from "./object";
 export * from "./page";
 export * from "./place";
 export * from "./profile";

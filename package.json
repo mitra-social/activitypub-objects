@@ -1,7 +1,7 @@
 {
   "name": "activitypub-objects",
   "version": "0.0.3",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "author": "aoinu",
   "license": "MIT",
   "private": false,

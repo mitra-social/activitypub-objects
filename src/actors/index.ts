@@ -1,4 +1,4 @@
-export { Actor, Actors } from "./actor";
+export { Actor } from "./actor";
 export { Application } from "./application";
 export { Group } from "./group";
 export { Organization } from "./organization";

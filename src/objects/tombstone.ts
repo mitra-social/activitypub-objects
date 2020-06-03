@@ -1,22 +1,23 @@
-import { ActivityObject, Objects } from "./object";
+import { Objects } from '../extended';
+import { NameObject } from './name-object';
 
-export class Tombstone implements ActivityObject {
+/**
+ * https://www.w3.org/ns/activitystreams#Tombstone
+ */
+export class Tombstone extends NameObject {
   public readonly type = Objects.TOMBSTONE;
-  public readonly name: string;
-  public readonly id?: URL;
   public readonly formerType: Objects;
   public readonly deleted: Date;
+
   constructor(params: {
-    name: string;
+    name?: string;
+    nameMap?: { [key: string]: string };
     formerType: Objects;
     deleted: Date;
     id?: URL;
   }) {
-    this.name = params.name;
+    super(Objects.TOMBSTONE, params);
     this.formerType = params.formerType;
     this.deleted = params.deleted;
-    if (params.id != null) {
-      this.id = params.id;
-    }
   }
 }

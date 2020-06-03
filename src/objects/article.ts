@@ -1,23 +1,23 @@
-import { ActivityObject, Objects } from "./object";
-import { Actor } from "../actors";
+import { ActivityObject, Link } from '../core';
+import { Objects } from '../extended';
+import { ContentObject } from './content-object';
 
-export class Article implements ActivityObject {
-  public readonly type = Objects.ARTICLE;
-  public readonly name: string;
-  public readonly id?: URL;
-  public readonly content: string;
-  public readonly attributedTo?: Actor | URL | Array<Actor | URL>;
+/**
+ * https://www.w3.org/ns/activitystreams#Article
+ */
+export class Article extends ContentObject {
+  public readonly attributedTo?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
+
   constructor(params: {
-    name: string;
-    content: string;
+    name?: string;
+    nameMap?: { [key: string]: string };
+    content?: string;
+    contentMap?: { [key: string]: string };
     id?: URL;
-    attributedTo?: Actor | URL | Array<Actor | URL>;
+    attributedTo?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
   }) {
-    this.name = params.name;
-    this.content = params.content;
-    if (params.id != null) {
-      this.id = params.id;
-    }
+    super(Objects.ARTICLE, params);
+
     if (params.attributedTo != null) {
       this.attributedTo = params.attributedTo;
     }

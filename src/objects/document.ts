@@ -1,20 +1,21 @@
-import { ActivityObject, Objects } from "./object";
-import { Link } from "../link";
+import { Link } from '../core';
+import { Objects } from '../extended';
+import { NameObject } from './name-object';
 
-export class Document implements ActivityObject {
-  public readonly type = Objects.DOCUMENT;
-  public readonly name: string;
-  public readonly id?: URL;
+/**
+ * https://www.w3.org/ns/activitystreams#Document
+ */
+export class Document extends NameObject {
   public readonly url: Link | URL | Array<Link | URL>;
+
   constructor(params: {
-    name: string;
     url: Link | URL | Array<Link | URL>;
     id?: URL;
-  }) {
-    this.name = params.name;
+    name?: string;
+    nameMap?: { [key: string]: string };
+  },
+    type?: string) {
+    super(type || Objects.DOCUMENT, params);
     this.url = params.url;
-    if (params.id != null) {
-      this.id = params.id;
-    }
   }
 }

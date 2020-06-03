@@ -1,21 +1,21 @@
-import { ActivityObject, Objects } from "./object";
+import { Objects } from '../extended';
+import { NameObject } from './name-object';
 
-export class Event implements ActivityObject {
-  public readonly type = Objects.EVENT;
-  public readonly name: string;
-  public readonly id?: URL;
+/**
+ * https://www.w3.org/ns/activitystreams#Event
+ */
+export class Event extends NameObject {
   public readonly startTime?: Date;
   public readonly endTime?: Date;
+
   constructor(params: {
-    name: string;
+    name?: string;
+    nameMap?: { [key: string]: string };
     id?: URL;
     startTime?: Date;
     endTime?: Date;
   }) {
-    this.name = params.name;
-    if (params.id != null) {
-      this.id = params.id;
-    }
+    super(Objects.EVENT, params)
     if (params.startTime != null) {
       this.startTime = params.startTime;
     }

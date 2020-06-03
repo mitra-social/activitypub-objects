@@ -1,14 +1,7 @@
-import { ActivityObject } from "../objects/object";
+import { ActivityObject } from '../core';
+import { Actors } from '../extended';
 
 export interface Actor extends ActivityObject {
   type: Actors;
   preferredUsername?: string;
-}
-
-export enum Actors {
-  APPLICATION = "Application",
-  GROUP = "Group",
-  ORGANIZATION = "Organization",
-  PERSON = "Person",
-  SERVICE = "Service"
 }

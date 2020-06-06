@@ -1,4 +1,4 @@
-export enum Actors {
+export enum ActorType {
   APPLICATION = "Application",
   GROUP = "Group",
   ORGANIZATION = "Organization",

@@ -1,4 +1,4 @@
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { ContentObject } from './content-object';
 
 /**
@@ -12,6 +12,6 @@ export class Note extends ContentObject {
     contentMap?: { [key: string]: string }
     id?: URL
   }) {
-    super(Objects.NOTE, params);
+    super(ObjectType.NOTE, params);
   }
 }

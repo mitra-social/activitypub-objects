@@ -1,5 +1,5 @@
 import { Link } from '../core';
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { Document } from "./document"
 
 /**
@@ -12,6 +12,6 @@ export class Image extends Document {
     url: Link | URL | Array<Link | URL>;
     id?: URL;
   }) {
-    super(params, Objects.IMAGE)
+    super(params, ObjectType.IMAGE)
   }
 }

@@ -1,5 +1,5 @@
 import { Activity, ActivityObject } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 
 /**
@@ -13,6 +13,6 @@ export class Ignore implements Activity {
     public readonly object: ActivityObject | URL,
     type?: string
   ) {
-    this.type = type || Activities.IGNORE;
+    this.type = type || ActivityType.IGNORE;
   }
 }

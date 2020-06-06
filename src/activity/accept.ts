@@ -1,5 +1,5 @@
 import { Activity, ActivityObject, Link } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 
 /**
@@ -14,6 +14,6 @@ export class Accept implements Activity {
     public readonly target?: ActivityObject | URL | Link | Array<ActivityObject | URL>,
     type?: string
   ) {
-    this.type = type || Activities.ACCEPT;
+    this.type = type || ActivityType.ACCEPT;
   }
 }

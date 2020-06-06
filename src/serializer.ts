@@ -1,5 +1,4 @@
 import { ActivityObject } from './core';
-import { InvalidPropertiesError } from "./exceptions";
 
 export const toJSON = (obj: ActivityObject): string => {
   // eslint-disable-next-line
@@ -25,7 +24,7 @@ export const toJSON = (obj: ActivityObject): string => {
 export const parse = (json: string): ActivityObject => {
   const obj = JSON.parse(json);
   if (obj["@context"] == null) {
-    throw new InvalidPropertiesError(
+    throw new Error(
       "The JSON string does not have a @context"
     );
   } else if (
@@ -33,7 +32,7 @@ export const parse = (json: string): ActivityObject => {
       "https://www.w3.org/ns/activitystreams"
     ) !== 0
   ) {
-    throw new InvalidPropertiesError(
+    throw new Error(
       "The JSON string is not activity vocabulary"
     );
   }

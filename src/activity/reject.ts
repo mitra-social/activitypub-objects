@@ -1,5 +1,5 @@
 import { ActivityObject, Activity } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 
 /**
@@ -13,6 +13,6 @@ export class Reject implements Activity {
     public readonly object: ActivityObject | URL,
     type?: string
   ) {
-    this.type = type || Activities.REJECT;
+    this.type = type || ActivityType.REJECT;
   }
 }

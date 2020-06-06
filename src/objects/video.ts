@@ -1,12 +1,12 @@
 import { NameObject } from './name-object';
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { Link } from '../core';
 
 /**
  * https://www.w3.org/ns/activitystreams#Video
  */
 export class Video extends NameObject {
-  public readonly type = Objects.VIDEO;
+  public readonly type = ObjectType.VIDEO;
   public readonly url: Link | URL | Array<Link | URL>;
   public readonly duration: string;
 
@@ -17,7 +17,7 @@ export class Video extends NameObject {
     duration: string;
     id?: URL;
   }) {
-    super(Objects.VIDEO, params);
+    super(ObjectType.VIDEO, params);
     this.url = params.url;
     this.duration = params.duration;
   }

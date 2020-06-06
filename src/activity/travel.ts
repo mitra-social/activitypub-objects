@@ -1,12 +1,12 @@
 import { ActivityObject, IntransitiveActivity, Link } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 
 /**
  * https://www.w3.org/TR/activitystreams-vocabulary/#dfn-travel
  */
 export class Travel implements IntransitiveActivity {
-  public readonly type = Activities.TRAVEL;
+  public readonly type = ActivityType.TRAVEL;
 
   constructor(
     public readonly actor: Actor | URL | Array<Actor | URL>,

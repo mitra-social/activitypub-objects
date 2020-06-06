@@ -1,5 +1,4 @@
 import * as ActivityPub from "../src";
-import { InvalidPropertiesError } from "../src";
 
 describe("Activity", () => {
   describe("Accept", () => {
@@ -191,14 +190,14 @@ describe("Activity", () => {
       }
     });
 
-    it("should throw InvalidPropertiesError when options or contents of the question is not set", () => {
+    it("should throw Error when options or contents of the question is not set", () => {
       const newQuestion = () => {
         return new ActivityPub.Question({
           name: "test",
         });
       };
       expect(newQuestion).toThrowError(
-        new InvalidPropertiesError("Question object must not have both properties. (content, anyOf, oneOf)"));
+        new Error("Question object must not have both properties. (content, anyOf, oneOf)"));
     });
   });
 

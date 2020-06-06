@@ -1,12 +1,11 @@
 import { ActivityObject, Link, IntransitiveActivity } from '../core';
-import { Activities } from '../extended';
-import { InvalidPropertiesError } from "../exceptions/invalid-properties-error";
+import { ActivityType } from '../extended';
 
 /**
  * https://www.w3.org/TR/activitystreams-vocabulary/#dfn-question
  */
 export class Question implements IntransitiveActivity {
-  public readonly type = Activities.QUESTION;
+  public readonly type = ActivityType.QUESTION;
   public readonly name: string;
   public readonly content?: string;
   public readonly contentMap?: { [key: string]: string };
@@ -30,7 +29,7 @@ export class Question implements IntransitiveActivity {
       params.anyOf == null &&
       params.oneOf == null
     ) {
-      throw new InvalidPropertiesError(
+      throw new Error(
         "Question object must not have both properties. (content, anyOf, oneOf)"
       );
     }

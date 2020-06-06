@@ -1,12 +1,12 @@
 import { Activity, ActivityObject, Link } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 
 /**
  * https://www.w3.org/TR/activitystreams-vocabulary/#dfn-move
  */
 export class Move implements Activity {
-  public readonly type = Activities.MOVE;
+  public readonly type = ActivityType.MOVE;
 
   constructor(
     public readonly actor: Actor | URL | Array<Actor | URL>,

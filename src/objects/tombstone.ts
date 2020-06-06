@@ -1,22 +1,22 @@
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { NameObject } from './name-object';
 
 /**
  * https://www.w3.org/ns/activitystreams#Tombstone
  */
 export class Tombstone extends NameObject {
-  public readonly type = Objects.TOMBSTONE;
-  public readonly formerType: Objects;
+  public readonly type = ObjectType.TOMBSTONE;
+  public readonly formerType: ObjectType;
   public readonly deleted: Date;
 
   constructor(params: {
     name?: string;
     nameMap?: { [key: string]: string };
-    formerType: Objects;
+    formerType: ObjectType;
     deleted: Date;
     id?: URL;
   }) {
-    super(Objects.TOMBSTONE, params);
+    super(ObjectType.TOMBSTONE, params);
     this.formerType = params.formerType;
     this.deleted = params.deleted;
   }

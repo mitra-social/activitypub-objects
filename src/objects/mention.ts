@@ -1,5 +1,5 @@
 import { Link, ActivityObject } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { MediaType } from '../param-types/media-type';
 import { LanguageTag } from '../param-types/language-tag';
 
@@ -7,7 +7,7 @@ import { LanguageTag } from '../param-types/language-tag';
  * https://www.w3.org/ns/activitystreams#Mention
  */
 export class Mention implements Link {
-  public readonly type = Activities.MENTION;
+  public readonly type = ActivityType.MENTION;
   public readonly href: URL;
   public readonly rel?: string;
   public readonly mediaType?: MediaType;

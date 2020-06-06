@@ -2,7 +2,7 @@ import { ActivityObject } from "./object";
 import { Link } from "./link";
 
 interface CollectionBase extends ActivityObject {
-  totalItems: number;
+  totalItems?: number;
   current?: CollectionPage | Link | URL;
   first?: CollectionPage | Link | URL;
   last?: CollectionPage | Link | URL;

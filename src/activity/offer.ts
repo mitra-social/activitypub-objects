@@ -1,5 +1,5 @@
 import { Activity, ActivityObject, Link } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 
 /**
@@ -14,6 +14,6 @@ export class Offer implements Activity {
     public readonly target?: Actor | URL | Link | Array<Actor | URL>,
     type?: string
   ) {
-    this.type = type || Activities.OFFER;
+    this.type = type || ActivityType.OFFER;
   }
 }

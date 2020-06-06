@@ -1,7 +1,7 @@
 import { ActivityObject } from '../core';
-import { Actors } from '../extended';
+import { ActorType } from '../extended';
 
 export interface Actor extends ActivityObject {
-  type: Actors;
+  type: ActorType;
   preferredUsername?: string;
 }

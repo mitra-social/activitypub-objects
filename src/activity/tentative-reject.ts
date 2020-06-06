@@ -1,5 +1,5 @@
 import { ActivityObject } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 import { Reject } from './reject';
 
@@ -11,6 +11,6 @@ export class TentativeReject extends Reject {
     public readonly actor: Actor | URL | Array<Actor | URL>,
     public readonly object: ActivityObject | URL
   ) {
-    super(actor, object, Activities.TENTATIVE_REJECT);
+    super(actor, object, ActivityType.TENTATIVE_REJECT);
   }
 }

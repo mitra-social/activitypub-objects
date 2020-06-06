@@ -1,5 +1,5 @@
 import { ActivityObject } from '../core';
-import { Activities } from '../extended'
+import { ActivityType } from '../extended'
 import { Actor } from '../actors';
 import { Ignore } from './ignore';
 
@@ -11,6 +11,6 @@ export class Block extends Ignore {
     actor: Actor | URL | Array<Actor | URL>,
     object: ActivityObject | URL
   ) {
-    super(actor, object, Activities.BLOCK);
+    super(actor, object, ActivityType.BLOCK);
   }
 }

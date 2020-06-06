@@ -1,12 +1,12 @@
 import { Activity, ActivityObject } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 
 /**
  * https://www.w3.org/TR/activitystreams-vocabulary/#dfn-dislike
  */
 export class Dislike implements Activity {
-  public readonly type = Activities.DISLIKE;
+  public readonly type = ActivityType.DISLIKE;
 
   constructor(
     public readonly actor: Actor | URL | Array<Actor | URL>,

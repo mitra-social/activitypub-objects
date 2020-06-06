@@ -1,4 +1,4 @@
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { NameObject } from './name-object';
 
 /**
@@ -15,7 +15,7 @@ export class Event extends NameObject {
     startTime?: Date;
     endTime?: Date;
   }) {
-    super(Objects.EVENT, params)
+    super(ObjectType.EVENT, params)
     if (params.startTime != null) {
       this.startTime = params.startTime;
     }

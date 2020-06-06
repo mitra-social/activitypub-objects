@@ -1,4 +1,4 @@
-export enum Objects {
+export enum ObjectType {
   ARTICLE = "Article",
   AUDIO = "Audio",
   DOCUMENT = "Document",

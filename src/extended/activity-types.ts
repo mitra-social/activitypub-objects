@@ -1,4 +1,4 @@
-export enum Activities {
+export enum ActivityType {
   ACCEPT = "Accept",
   ADD = "Add",
   ANNOUNCE = "Announce",

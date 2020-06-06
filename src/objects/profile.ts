@@ -1,4 +1,4 @@
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { Actor } from '../actors';
 import { BaseObject } from './base-object';
 
@@ -10,7 +10,7 @@ export class Profile extends BaseObject {
   public readonly describes: Actor;
 
   constructor(params: { summary: string; describes: Actor; id?: URL }) {
-    super(Objects.PROFILE, params);
+    super(ObjectType.PROFILE, params);
     this.summary = params.summary;
     this.describes = params.describes;
   }

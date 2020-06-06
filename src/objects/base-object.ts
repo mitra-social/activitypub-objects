@@ -10,9 +10,6 @@ export class BaseObject implements ActivityObject {
       id?: URL
     }) {
     this.type = type;
-
-    if (params.id != null) {
-      this.id = params.id;
-    }
+    this.id = params.id;
   }
 }

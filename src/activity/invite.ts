@@ -1,5 +1,5 @@
 import { ActivityObject, Link } from '../core';
-import { Activities } from '../extended';
+import { ActivityType } from '../extended';
 import { Actor } from '../actors';
 import { Offer } from './offer';
 
@@ -12,6 +12,6 @@ export class Invite extends Offer {
     object: ActivityObject | URL,
     target: Actor | URL | Link | Array<Actor | URL>
   ) {
-    super(actor, object, target, Activities.INVITE);
+    super(actor, object, target, ActivityType.INVITE);
   }
 }

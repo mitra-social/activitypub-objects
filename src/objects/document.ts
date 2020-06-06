@@ -1,5 +1,5 @@
 import { Link } from '../core';
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { NameObject } from './name-object';
 
 /**
@@ -15,7 +15,7 @@ export class Document extends NameObject {
     nameMap?: { [key: string]: string };
   },
     type?: string) {
-    super(type || Objects.DOCUMENT, params);
+    super(type || ObjectType.DOCUMENT, params);
     this.url = params.url;
   }
 }

@@ -1,4 +1,4 @@
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { NameObject } from './name-object';
 
 /**
@@ -23,7 +23,7 @@ export class Place extends NameObject {
     radius?: number;
     units?: string;
   }) {
-    super(Objects.PLACE, params);
+    super(ObjectType.PLACE, params);
 
     if (params.accuracy != null) {
       this.accuracy = params.accuracy;

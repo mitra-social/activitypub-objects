@@ -1,5 +1,5 @@
 import { ActivityObject, Link } from '../core';
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { ContentObject } from './content-object';
 
 /**
@@ -16,7 +16,7 @@ export class Article extends ContentObject {
     id?: URL;
     attributedTo?: ActivityObject | Link | URL | Array<ActivityObject | URL>;
   }) {
-    super(Objects.ARTICLE, params);
+    super(ObjectType.ARTICLE, params);
 
     if (params.attributedTo != null) {
       this.attributedTo = params.attributedTo;

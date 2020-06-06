@@ -1,5 +1,5 @@
 import { Link } from '../core';
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { NameObject } from './name-object';
 
 /**
@@ -14,7 +14,7 @@ export class Page extends NameObject {
     url: Link | URL | Array<Link | URL>;
     id?: URL;
   }) {
-    super(Objects.PAGE, params);
+    super(ObjectType.PAGE, params);
     this.url = params.url;
   }
 }

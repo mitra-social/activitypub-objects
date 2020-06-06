@@ -1,4 +1,4 @@
-import { Objects } from '../extended';
+import { ObjectType } from '../extended';
 import { Actor } from '../actors';
 import { BaseObject } from './base-object';
 
@@ -6,7 +6,7 @@ import { BaseObject } from './base-object';
  * https://www.w3.org/ns/activitystreams#Relationship
  */
 export class Relationship extends BaseObject {
-  public readonly type = Objects.RELATIONSHIP;
+  public readonly type = ObjectType.RELATIONSHIP;
   public readonly id?: URL;
   public readonly relationship: Relation;
   public readonly subject: Actor;
@@ -18,7 +18,7 @@ export class Relationship extends BaseObject {
     object: Actor;
     id?: URL;
   }) {
-    super(Objects.RELATIONSHIP, params);
+    super(ObjectType.RELATIONSHIP, params);
     this.relationship = params.relationship;
     this.subject = params.subject;
     this.object = params.object;

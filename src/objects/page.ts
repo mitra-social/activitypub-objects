@@ -1,20 +1,20 @@
-import { ActivityObject, Objects } from "./object";
-import { Link } from "../link";
+import { Link } from '../core';
+import { ObjectType } from '../extended';
+import { NameObject } from './name-object';
 
-export class Page implements ActivityObject {
-  public readonly type = Objects.PAGE;
-  public readonly name: string;
-  public readonly id?: URL;
+/**
+ * https://www.w3.org/ns/activitystreams#Page
+ */
+export class Page extends NameObject {
   public readonly url: Link | URL | Array<Link | URL>;
+
   constructor(params: {
-    name: string,
-    url: Link | URL | Array<Link | URL>,
-    id?: URL,
+    name?: string;
+    nameMap?: { [key: string]: string };
+    url: Link | URL | Array<Link | URL>;
+    id?: URL;
   }) {
-    this.name = params.name;
+    super(ObjectType.PAGE, params);
     this.url = params.url;
-    if (params.id != null) {
-      this.id = params.id;
-    }
   }
 }

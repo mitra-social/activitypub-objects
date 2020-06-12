@@ -1,29 +1,30 @@
-import { ActivityObject, Objects } from "./object";
+import { ObjectType } from '../extended';
+import { NameObject } from './name-object';
 
-export class Place implements ActivityObject {
-  public readonly type = Objects.PLACE;
-  public readonly name: string;
-  public readonly id?: URL;
+/**
+ * https://www.w3.org/ns/activitystreams#Place
+ */
+export class Place extends NameObject {
   public readonly accuracy?: number;
   public readonly altitude?: number;
   public readonly latitude?: number;
   public readonly longitude?: number;
   public readonly radius?: number;
   public readonly units?: string;
+
   constructor(params: {
-    name: string,
-    id?: URL,
-    accuracy?: number,
-    altitude?: number,
-    latitude?: number,
-    longitude?: number,
-    radius?: number,
-    units?: string,
+    name?: string;
+    nameMap?: { [key: string]: string };
+    id?: URL;
+    accuracy?: number;
+    altitude?: number;
+    latitude?: number;
+    longitude?: number;
+    radius?: number;
+    units?: string;
   }) {
-    this.name = params.name;
-    if (params.id != null) {
-      this.id = params.id;
-    }
+    super(ObjectType.PLACE, params);
+
     if (params.accuracy != null) {
       this.accuracy = params.accuracy;
     }

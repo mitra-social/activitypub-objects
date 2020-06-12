@@ -1,5 +1,4 @@
 import * as ActivityPub from "../src";
-import { InvalidPropertiesError } from "../src";
 
 describe("Activity", () => {
   describe("Accept", () => {
@@ -7,7 +6,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Accept(
         new ActivityPub.Person("test1"), new ActivityPub.Person("test2"), new ActivityPub.Group("group1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
       expect((activity.object as ActivityPub.Actor).name).toBe("test2");
       expect((activity.target as ActivityPub.Group).name).toBe("group1");
     });
@@ -18,7 +17,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Add(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -27,7 +26,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Announce(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -36,7 +35,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Arrive(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -45,7 +44,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Block(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -54,7 +53,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Create(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -63,7 +62,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Delete(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -72,7 +71,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Dislike(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -81,7 +80,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Flag(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -90,7 +89,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Follow(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -99,7 +98,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Ignore(
         new ActivityPub.Person("test"), new URL("https://test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test");
     });
   });
 
@@ -114,7 +113,7 @@ describe("Activity", () => {
         new ActivityPub.Person("test2"),
       );
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -123,7 +122,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Join(
         new ActivityPub.Person("test1"), new ActivityPub.Group("group1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -132,7 +131,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Leave(
         new ActivityPub.Person("test1"), new ActivityPub.Group("group1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -141,7 +140,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Like(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -150,7 +149,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Listen(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -159,7 +158,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Move(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -168,7 +167,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Offer(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -191,14 +190,14 @@ describe("Activity", () => {
       }
     });
 
-    it("should throw InvalidPropertiesError when options or contents of the question is not set", () => {
+    it("should throw Error when options or contents of the question is not set", () => {
       const newQuestion = () => {
         return new ActivityPub.Question({
           name: "test",
         });
       };
       expect(newQuestion).toThrowError(
-        new InvalidPropertiesError("Question object must not have both properties. (content, anyOf, oneOf)"));
+        new Error("Question object must not have both properties. (content, anyOf, oneOf)"));
     });
   });
 
@@ -207,7 +206,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Read(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -216,7 +215,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Remove(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -225,7 +224,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Reject(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -234,7 +233,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.TentativeAccept(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -243,7 +242,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.TentativeReject(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -252,7 +251,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Travel(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"), new URL("https:///test.com/2"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -261,7 +260,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Undo(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -270,7 +269,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.Update(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 
@@ -279,7 +278,7 @@ describe("Activity", () => {
       const activity = new ActivityPub.View(
         new ActivityPub.Person("test1"), new URL("https:///test.com/1"));
       expect(activity).toBeTruthy();
-      expect((activity.actor as ActivityPub.Actor).name ).toBe("test1");
+      expect((activity.actor as ActivityPub.Actor).name).toBe("test1");
     });
   });
 });

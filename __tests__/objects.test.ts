@@ -185,7 +185,7 @@ describe("Object", () => {
       const obj = new ActivityPub.Tombstone({
         name: "name",
         id: new URL("https://test.com/image/1"),
-        formerType: ActivityPub.Objects.IMAGE,
+        formerType: ActivityPub.ObjectType.IMAGE,
         deleted: new Date(),
       });
       expect(obj).toBeTruthy();

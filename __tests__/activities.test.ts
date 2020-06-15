@@ -185,8 +185,10 @@ describe("Activity", () => {
       expect(activity).toBeTruthy();
       expect(activity.name).toBe("test");
       expect(activity.oneOf).toBeDefined();
+
       if (activity.oneOf != null) {
-        expect(activity.oneOf[0].name).toBe("option1");
+        const notes = activity.oneOf as ActivityPub.Note[];
+        expect(notes[0].name).toBe("option1");
       }
     });
 

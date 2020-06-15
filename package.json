@@ -1,13 +1,13 @@
 {
   "name": "activitypub-objects",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "author": "aoinu",
   "license": "MIT",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aoinu/activitypub-objects.git"
+    "url": "https://github.com/mitra-social/activitypub-objects.git"
   },
   "scripts": {
     "prettier": "prettier --config .prettierrc 'src/**/*.ts' --write",
